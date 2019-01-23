@@ -134,10 +134,13 @@ class SignUpCest
         $I->click(SignUp::$privacyPolicyLink);
         $I->waitForElementVisible(SignUp::$privacyPolicyForm);
 
-        $scrollObj = '
-            obj = document.querySelector("*[id^=\'dialog_\'] > div");
+        $scrollObj = sprintf(
+            '
+            obj = document.querySelector("%s");
             obj.scrollTop = obj.scrollHeight;
-        ';
+        ',
+        SignUp::$privacyPolicyForm
+        );
 
         $I->executeJS($scrollObj);
         $I->click(SignUp::$privacyPolicyCloseIcon);

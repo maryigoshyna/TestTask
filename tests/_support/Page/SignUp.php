@@ -133,11 +133,11 @@ class SignUp
     public static $privacyPolicyLink = '//*[text()="privacy policy"]';
 
     /**
-     * Privacy policy form
+     * Privacy policy form (with scrollbar)
      *
      * @var string
      */
-    public static $privacyPolicyForm = '#document-content';
+    public static $privacyPolicyForm = '.privacy-policy-dialog > div';
 
     /**
      * Privacy policy close icon
