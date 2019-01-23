@@ -16,3 +16,8 @@ modules:
             request_timeout:    60
             connection_timeout: 60
             pageload_timeout:   60
+        - VisualCeption:
+              maximumDeviation: 0
+              saveCurrentImageIfFailure: true
+              fullScreenShot: true
+              report: true

@@ -14,6 +14,18 @@ class SignUpCest
     protected $inslyAdress;
 
     /**
+     * Check that blocks looks like adminBlock.png
+     *
+     * @param  AcceptanceTester $I
+     * @throws Exception
+     */
+    public function checkAdminAccountBlockScreen(AcceptanceTester $I)
+    {
+        $I->amOnPage(SignUp::$url);
+        $I->dontSeeVisualChanges('adminBlock', SignUp::$mainForm);
+    }
+
+    /**
      * Check sign up
      *
      * @param  AcceptanceTester $I

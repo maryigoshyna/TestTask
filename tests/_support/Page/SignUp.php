@@ -14,6 +14,13 @@ class SignUp
     public static $url = '/signup';
 
     /**
+     * Sign-up form
+     *
+     * @var string
+     */
+    public static $mainForm = 'table.insly-form';
+
+    /**
      * Company name field
      *
      * @var string
